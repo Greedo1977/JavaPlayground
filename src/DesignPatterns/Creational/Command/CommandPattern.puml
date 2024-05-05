@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Command
+interface FileSystemReceiver
+
+Command <|-- CloseFileCommand
+Command <|-- OpenFileCommand
+Command <|-- WriteFileCommand
+
+FileSystemReceiver <|-- UnixFileSystemReceiver
+FileSystemReceiver <|-- WindowsFileSystemReceiver
+
+
+
+@enduml
